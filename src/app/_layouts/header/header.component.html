@@ -1,0 +1,71 @@
+<div class="grid-container-fluid">
+  <div class="grid-x">
+    <div class="small-12 cell">
+      <header class="top-bar">
+
+        <div class="top-bar-left">
+          
+          <!-- Mobile Hamburger Menu Only Visible for Small Viewport -->
+          <div class="hamburger hide-for-medium" 
+            [attr.aria-expanded]="!isOffcanvas" 
+            aria-controls="offCanvasMenu" 
+            (click)="offcanvas.show()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div><!-- /hamburger menu -->
+
+          <a routerLink="" title="{{appTitle}}">
+            <div class="appTitle">
+              {{appTitle}}
+            </div>
+          </a>
+        </div><!-- /top-bar-left -->
+
+        <nav class="top-bar-right hide-for-small-only">
+          <ul class="menu">
+            <li>
+              <a routerLink="/demo" 
+                routerLinkActive="active"  
+                [routerLinkActiveOptions]="{ exact: true }">
+                Demo Page
+              </a>
+            </li>
+            <li><a routerLink="/">Nav Link 2</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Mobile Off-Canvas Main Menu -->
+        <nav [offcanvas]="isOffcanvas" 
+          class="off-canvas position-left" 
+          id="offCanvasMenu" 
+          aria-hidden="true" 
+          #offcanvas="bs-offcanvas"> 
+          <ul class="menu vertical">
+            <li>
+              <a routerLink="/demo" 
+                routerLinkActive="active"  
+                [routerLinkActiveOptions]="{ exact: true }" 
+                (click)="offcanvas.hide()">
+                Demo Page
+              </a>
+            </li>
+            <li>
+              <a routerLink="/" (click)="offcanvas.hide()">
+                Nav Link 2
+              </a>
+            </li>
+          </ul>
+          <button class="close-button" 
+            aria-label="Close Menu" 
+            aria-controls="offCanvasMenu" 
+            type="button" 
+            (click)="offcanvas.hide()">
+              <span aria-hidden="true">×</span>
+          </button>
+        </nav>
+
+      </header>
+    </div><!-- / cell -->
+  </div><!-- /grid -->
+</div><!-- /grid-container-fluid -->

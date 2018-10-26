@@ -1,0 +1,13 @@
+<app-header></app-header>
+
+<div class="off-canvas-wrapper">
+  <main class="grid-container-fluid">
+    <div class="grid-x grid-margin-x">
+      <div class="small-12 cell">
+        <router-outlet (activate)="onActivate($event)"></router-outlet>
+      </div><!-- /cell -->
+    </div><!-- /grid-x -->
+  </main><!-- /grid-container --> 
+</div><!-- /off-canvas-wrapper -->
+
+<app-footer></app-footer>

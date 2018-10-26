@@ -1,0 +1,518 @@
+<section>
+  <h2>ngx-foundation Components Demo</h2>
+</section>
+
+<!-- ACCORDION SECTION -->
+<section>
+  <h4>Accordion</h4>
+  <accordion>
+    <accordion-group [isDisabled]="true" heading="Static Header, Disabled">
+      You shouldn't be able to see this since it's disabled.
+    </accordion-group>
+    <accordion-group heading="Another group">
+      <p>Some content</p>
+    </accordion-group>
+    <accordion-group heading="Another group">
+      <p>Some content</p>
+    </accordion-group>
+    <accordion-group heading="Another group">
+      <p>Some content</p>
+    </accordion-group>
+  </accordion>
+  <br>
+</section>
+
+<!-- ACCORDION (COLLAPSE) SECTION -->
+<section>
+  <h4>Accordion <small>(Equiv to BS Collapse)</small></h4>
+  <p>Content not in an unordered list</p>
+  <div class="accordion" role="tablist">
+    <button type="button" class="button primary" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Toggle collapse</button>
+    <div id="collapseBasic" [collapse]="isCollapsed" class="callout primary">
+      Some content that is collapsed on page load.
+    </div>
+  </div><!-- /accordion -->
+</section>
+
+<hr>
+
+<!-- BUTTONS (BUTTON GROUPS) WITH FORM ELEMENTS SECTION -->
+<section>
+  <h4>Button Groups</h4>
+  <p>Checkbox buttons with ReactiveForms</p>
+  <pre class="callout">{{myForm.value | json}}</pre>
+  <form [formGroup]="myForm">
+    <div class="button-group small">
+      <label class="button primary selectable" 
+        [class.active]="myForm.value.left"
+        btnCheckbox formControlName="left"
+        tabindex="0" role="button">
+        Left
+      </label>
+      <label class="button primary selectable" 
+        [class.active]="myForm.value.middle"
+        btnCheckbox formControlName="middle"
+        tabindex="0" role="button">
+        Middle
+      </label>
+      <label class="button primary selectable" 
+        [class.active]="myForm.value.right"
+        btnCheckbox formControlName="right"
+        tabindex="0" role="button">
+        Right
+      </label>
+    </div><!-- /button-group -->
+  </form>
+</section>
+
+<hr>
+
+<!-- ALERTS (Foundation Callouts) SECTION -->
+<section>
+  <h4>Callouts <small>(Equiv to Bootstrap Alerts)</small></h4>
+  <alert type="">Plain Static Callout with Default/Plain Styling</alert>
+  <div *ngFor="let alert of alerts">
+    <alert [type]="alert.type" 
+      [dismissible]="dismissible" 
+      (onClosed)="onClosed(alert)">
+      <span [innerHtml]="alert.msg"></span>
+    </alert>
+  </div>
+</section>
+  
+<hr>
+
+<!-- DYNAMIC CAROUSEL (Foundation Orbit) SECTION -->
+<section>
+  <div class="grid-x grid-margin-x">
+    <div class="medium-9 large-7 cell">
+      <h4>Orbit <small>(Equiv to BS Carousel)</small></h4>
+      <carousel [showIndicators]="true">
+        <slide *ngFor="let slide of slides" let index="index">
+          <figure class="orbit-figure"> 
+            <img class="orbit-image" [src]="slide.src" [alt]="slide.alt">
+            <figcaption class="orbit-caption">
+              <span [innerHtml]="slide.caption"></span>
+            </figcaption>
+          </figure>
+        </slide>
+      </carousel>
+    </div><!-- /cell -->
+  </div><!-- /grid -->
+</section>
+
+<hr>
+
+<!-- DATEPICKER SECTION -->
+<section>
+  <h4>Datepicker</h4><br>
+  <div class="grid-x grid-margin-x">
+    <div class="small-6 medium-3 large-2 cell">
+      <input type="text"
+        placeholder="Datepicker"
+        placement="top"
+        bsDatepicker>
+    </div><!-- /cell -->
+    <div class="small-6 medium-3 large-2 cell">
+      <input type="text"
+        placeholder="Daterangepicker"
+        placement="top"
+        bsDaterangepicker>
+    </div><!-- /cell -->
+  </div><!-- /grid -->
+</section>
+
+<hr>
+
+<!-- DROPDOWNS SECTION -->
+<section>
+  <h4>Dropdowns</h4><br>   
+  <div class="grid-x grid-margin-x">
+    <div class="medium-5 large-3 cell">
+      <ul class="dropdown vertical menu" dropdown #dropdown="bs-dropdown" [autoClose]="false">
+        <li class="is-dropdown-submenu-parent">
+          <button dropdownToggle type="button" 
+            class="dropdown button primary" 
+            aria-controls="dropdown-button">
+            Button Dropdown Menu 
+          </button>
+          <ul id="dropdown-button" 
+            *dropdownMenu 
+            class="menu is-dropdown-submenu" 
+            role="menu">
+            <li role="menuitem"><a href="#">Item 1</a></li>
+            <li role="menuitem"><a href="#">Item 2</a>
+            </li>
+            <li role="menuitem"><a href="#">Item 3a</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /cell -->
+
+    <div class="medium-5 large-3 cell">
+      <div class="button-group">
+        <button type="button" class="button primary" (click)="dropdown.toggle(true)">Toggle</button>
+        <button type="button" class="button secondary" (click)="dropdown.show()">Show</button>
+        <button type="button" class="button alert" (click)="dropdown.hide()">Hide</button>
+      </div><!-- /button-group -->
+    </div><!-- /cell -->
+
+    <div class="medium-5 large-3 cell">
+      <ul class="dropdown vertical menu" dropdown [dropup]="isDropup">
+        <li class="is-dropdown-submenu-parent">
+          <button dropdownToggle type="button" class="dropup button primary" aria-controls="dropdown-button">
+            Button DropUp Menu 
+          </button>
+          <ul id="dropdown-button" *dropdownMenu class="menu is-dropdown-submenu has-position-top" role="menu">
+            <li role="menuitem"><a href="#">Item 1</a></li>
+            <li role="menuitem"><a href="#">Item 2</a>
+            </li>
+            <li role="menuitem"><a href="#">Item 3a</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /cell -->
+  </div><!-- /grid -->
+  
+  <div class="grid-x grid-margin-x">
+    <div class="medium-2 large-3 cell">
+      <ul class="dropdown menu">
+        <li dropdown #dropdownText="bs-dropdown" triggers="mouseover" class="is-dropdown-submenu-parent">
+          <a dropdownToggle (click)="false">
+            Dropdown Menu On Mouseover
+          </a>
+          <ul id="dropdown-triggers-manual" *dropdownMenu class="menu is-dropdown-submenu"
+              role="menu" aria-labelledby="button-triggers-manual">
+            <li role="menuitem"><a href="#">Action</a></li>
+            <li role="menuitem"><a href="#">Another action</a>
+            </li>
+            <li role="menuitem"><a href="#">Something else
+              here</a></li>
+            <li class="divider dropdown-divider"></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /cell -->
+  </div><!-- /grid -->
+</section>
+
+<hr>
+
+<!-- REVEAL SECTION -->
+<section>
+  <h4>Reveal <small>(Equiv to BS Modals)</small></h4><br>
+  <div class="grid-x grid-margin-x">
+    <div class="small-12 cell">
+      <button type="button" class="button primary" (click)="openReveal(reveal)">Open modal</button>
+      <br><br>
+      <div class="callout">
+        <p>Modal #1 Yes/No Button Confirmation:</p>
+        <p>{{message}}</p>
+      </div>
+      <ng-template #reveal>
+        <h4>Awesome. I Have It.</h4>
+        <hr>
+        <p class="lead">Your couch. It is mine.</p>
+        <p>I'm a paragraph that lives inside of a modal.</p>
+        <button class="close-button" (click)="modalRef.hide()" aria-label="Close modal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="button-group">
+          <button type="button" class="button success" (click)="confirm()" >Yes</button>
+          <button type="button" class="button alert" (click)="decline()" >No</button>
+        </div>
+        <div class="float-right">
+          <button type="button" class="button tertiary" (click)="openReveal2(revealNested)">Open Second Modal</button>
+        </div>
+      </ng-template>
+
+      <!-- Nested Reveal (Modal) -->
+      <ng-template #revealNested>
+        <h4>Second Nested Modal</h4>
+        <hr>
+        <button type="button" class="close-button" aria-label="Close" (click)="modalRef2.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <p>This is a nested modal.</p>
+        <div class="btn-cont-alt">
+          <button *ngIf="modalRef" type="button" class="button alert" (click)="closeFirstModal()">Close first modal</button>
+        </div>
+      </ng-template>
+    </div><!-- /cell -->
+  </div><!-- /grid -->
+</section>
+
+<hr>
+
+<!-- PAGINATION SECTION -->
+<section>
+  <h4>Pagination</h4>
+  <br>
+  <pagination [totalItems]="40"></pagination>
+  <br>
+</section>
+<section>
+  <h5>Added Boundary Links with a Limit</h5><br>
+  <pagination [boundaryLinks]="showBoundaryLinks" [rotate]="rotate" [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize"></pagination>
+  <button type="button" class="button primary" (click)="showBoundaryLinks = !showBoundaryLinks">Hide/show boundary links</button><br>
+  <button type="button" class="button secondary" (click)="rotate = !rotate">Toggle centering current page link</button>
+</section>
+
+<hr>
+
+<!-- PROGRESS BAR SECTION -->
+<section>
+  <h4>Progress Bar</h4><br>
+  <div class="grid-x grid-margin-x">
+    <div class="medium-8 large-5 cell">
+      <section>
+        <progressbar [value]="85" type="default"></progressbar>
+        <progressbar [value]="75" type="success" class="success">75%</progressbar>
+        <progressbar [value]="50" type="warning" class="warning">50%</progressbar>
+        <progressbar [value]="25" type="alert" class="alert">25%</progressbar>
+        <progressbar [value]="0" type="alert" class="alert">0%</progressbar>
+      </section>
+      <section>
+        <br>
+        <h5>Dynamic Progress Bar</h5>
+        <progressbar [animate]="true" [ngClass]="type" [value]="dynamic" [type]="type">{{dynamic}}%</progressbar>
+        <p>Level:  <span class="has-tooltip"
+          tooltip="Displaying a progress bar level of {{type}}."
+          placement="auto">{{type | capitalize}}</span>
+        </p> 
+        <button type="button" class="button primary" (click)="random()">Randomize Above Progress Bar</button>
+      </section>
+    </div><!-- /cell -->
+  </div><!-- /grid -->
+</section>
+
+<hr>
+
+<!-- RATING SECTION -->
+<section>
+  <h4>Rating</h4>
+  <rating [(ngModel)]="rate" 
+    [max]="max" 
+    [readonly]="isReadonly"
+    (keyup)="confirmSelection($event)"
+    (onHover)="hoveringOver($event)" 
+    (onLeave)="resetStar()"
+    [titles]="['one','two','three']">
+  </rating>
+  <span
+    [ngClass]="{'alert-color': percent<30, 'warning-color': percent>=30 && percent<70, 'success-color': percent>=70}"
+    [ngStyle]="{display: (overStar && !isReadonly) ? 'inline' : 'none'}"> 
+    {{percent}}%
+  </span>
+  <pre style="margin:15px 0;">Rate: <b>{{rate}}</b>;  Readonly is: <i>{{isReadonly}}</i>;  Hovering over: <b>{{overStar || "none"}}</b></pre>
+  <br>
+  <button class="button small primary" (click)="resetStarsCTA()">Reset rating and status</button>
+  <br>
+</section>
+
+<hr>
+
+<!-- SORTABLE SECTION -->
+<section>
+  <h4>Sortable</h4>
+  <p>Re-arrange the list or move from one column to the other.</p> 
+  <div class="grid-x grid-margin-x">
+    <div class="small-6 medium-5 large-3 cell">
+      <bs-sortable
+        [(ngModel)]="itemStringsLeft"
+        itemClass="callout sortable"
+        itemActiveClass="active success"
+        placeholderItem="Empty Column Drag Here"
+        placeholderClass="callout sortable placeholder"
+        wrapperClass="sortable-wrapper"
+      ></bs-sortable><br>
+      <pre class="callout primary">model: {{ itemStringsLeft | json }}</pre>
+    </div><!-- /cell -->
+    <div class="small-6 medium-5 large-3 cell">
+      <bs-sortable
+        [(ngModel)]="itemStringsRight"
+        itemClass="callout sortable"
+        itemActiveClass="active success"
+        placeholderItem="Empty Column Drag Here"
+        placeholderClass="callout sortable placeholder"
+        wrapperClass="sortable-wrapper"
+      ></bs-sortable><br>
+      <pre class="callout primary">model: {{ itemStringsRight | json }}</pre>
+    </div><!-- /cell -->
+  </div><!-- /grid -->
+</section>
+
+<hr>
+
+<!-- TABS SECTION -->
+<section>
+  <h4>Tabs</h4>
+  <p>You can select tabs directly from component</p>
+  <div class="button-group">
+    <button type="button" 
+      class="button small primary" 
+      (click)="selectTab(1)">
+      Select second tab
+    </button>
+    <button type="button" 
+      class="button small success" 
+      (click)="selectTab(2)">
+      Select third tab
+    </button>
+    <button type="button" 
+      class="button small primary" 
+      (click)="disableEnableTab()">
+      Enable / Disable fourth tab
+    </button>
+  </div><!-- /button-group -->
+  <tabset #staticTabs>
+    <tab heading="Static Tab 1">Tab 1 static content</tab>
+    <tab heading="Static Tab 2">Tab 2 static content</tab>
+    <tab heading="Static Tab 3">Tab 3 static content</tab>
+    <tab heading="Static Tab 4">Tab 4 static content</tab>
+  </tabset>
+</section>
+
+<hr>
+
+<!-- TIMEPICKER SECTION -->
+<section>
+  <h4>Timepicker</h4>
+  <timepicker [(ngModel)]="mytime" [showSeconds]="true"></timepicker>
+  <pre class="callout primary">Time is: {{mytime}}</pre>
+</section>
+
+<hr>
+
+<!-- TOOLTIP SECTION -->
+<section>
+  <h4>Tooltip</h4>
+  <br>
+  <button type="button" 
+    class="button"
+    tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+    Simple demo
+  </button>
+
+  <div class="button-group small">
+    <button type="button" 
+      class="button"
+      tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+      placement="auto">
+      Tooltip auto
+    </button>
+    <button type="button" 
+      class="button"
+      tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+      placement="top">
+      Tooltip on top
+    </button>
+    <button type="button" 
+      class="button"
+      tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+      placement="right">
+      Tooltip on right
+    </button>
+    <button type="button" 
+      class="button"
+      tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+      placement="left">
+      Tooltip on left
+    </button>
+    <br>
+  </div><!-- /button-group -->
+  
+  <button type="button" class="button expanded"
+    tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+    placement="bottom">
+    Tooltip on bottom
+  </button>
+
+  <br>
+  
+  <button type="button" class="button success"
+    tooltip="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+    triggers="focus">
+    Dismissible tooltip
+  </button><br>
+
+  <button type="button" class="button" [tooltip]="tooltipContent">
+    Dynamic Content Simple binding
+  </button><br>
+
+  <ng-template #ttHtml>
+    Here we go: <div [innerHtml]="tooltipHtml"></div>
+  </ng-template>
+
+  <button type="button" 
+    class="button tertiary"
+    [tooltip]="ttHtml"
+    triggers="click">
+    Clickable tooltip with html
+  </button>
+</section>
+
+<section>
+  I'm a 
+  <span class="has-tip"
+    tooltip="Text only tooltip - Blah blah blah."
+    placement="top">
+    text only 
+  </span> 
+  tooltip.
+</section>
+
+<hr>
+
+<!-- TYPEAHEAD SECTION -->
+<section>
+  <h4>Typeahead</h4>
+  <p>Auto-populated after 3 characters. No results found warning box appears if results are nil.</p> 
+  <pre class="callout">Model: {{selected | json}}</pre>
+  <label>Type in a U.S. State
+    <input [(ngModel)]="selected"
+      [typeahead]="states"
+      [typeaheadMinLength]="3"
+      (typeaheadNoResults)="typeaheadNoResults($event)"
+      type="text"
+      placeholder="U.S. States Only">
+  </label>
+  <div class="callout alert" *ngIf="noResult">No Results Found</div>
+</section>
+
+<hr>
+
+<!-- OFF CANVAS SECTION -->
+<section>
+  <h4>Off-Canvas Test</h4>
+  
+  <button type="button" 
+    class="button primary" 
+    [attr.aria-expanded]="!isOffcanvas" 
+    aria-controls="offCanvasMenu" 
+    (click)="offcanvas.show()">
+    Toggle Off Canvas
+  </button>
+
+  <div [offcanvas]="isOffcanvas" 
+    class="off-canvas position-left" 
+    id="offCanvasMenu" 
+    aria-hidden="true" 
+    #offcanvas="bs-offcanvas"> 
+    <ul class="menu vertical">
+      <li>Off Canvas Example</li>
+      <li>
+        <a routerLink="/demo" 
+          routerLinkActive="active"  
+          [routerLinkActiveOptions]="{ exact: true }" 
+          (click)="offcanvas.hide()">
+          Demo Page
+        </a>
+      </li>
+      <li><a routerLink="/" (click)="offcanvas.hide()">Nav Link 2</a></li>
+    </ul>
+    <button class="close-button" aria-label="Close Menu" aria-controls="offCanvasMenu" type="button" (click)="offcanvas.hide()">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+</section>
