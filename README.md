@@ -1,6 +1,6 @@
 # ngx-foundation Starter Kit
 
-A Starter Kit for ngx-foundation. Contains all of the basic assets to get your SPA up and running quickly.
+A Starter Kit for ngx-foundation that uses Angular 7. Contains all of the basic assets to get your SPA up and running quickly.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
@@ -17,6 +17,10 @@ Run `yarn` or `npm install`
 ## Development server
 
 Run `yarn start` or `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## API and Examples
+
+Visit the [ngx-foundation](https://ngxfoundation.com) site to see examples with extensive code snippets. 
 
 ## Code scaffolding
 
