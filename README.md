@@ -83,7 +83,7 @@ The main stylesheet `/src/styles.scss` contains all of the needed base imports. 
 ### SCSS Variables
 
 Add your own unique styling by changing the variables in `/src/assets/scss/_settings.scss`. This overrides the Foundation variables without having to edit the Foundation for Sites settings source file which allows for a near seemless upgrade when updating Foundation.  
-## Optional What-input
+### Optional What-input
 
 `what-input.js` is imported as a dependency and can be implemented by adding it to the `scripts` array located in the `/angular.json` file.
 `"scripts": [
@@ -92,15 +92,15 @@ Add your own unique styling by changing the variables in `/src/assets/scss/_sett
 
 Be sure to add it to both "build" and "test".
 
-## Build
+## Build and Tests
 
 Run `yarn build` or  `ng build` to build your project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running Unit Tests
+### Running Unit Tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+### Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
