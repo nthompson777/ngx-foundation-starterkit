@@ -41,7 +41,8 @@ If you do not already have Yarn installed, install it globally [here](https://ya
 
 All ngx-foundation components are imported by default and are globally available in your project: `/src/app/shared/ngx-foundation.module.ts`. Remove or comment out the modules that you do not need.  
 
-`import {
+```
+import {
   AccordionModule,
   AlertModule,
   ButtonsModule,
@@ -60,7 +61,8 @@ All ngx-foundation components are imported by default and are globally available
   TimepickerModule,
   TooltipModule,
   TypeaheadModule,
-} from 'ngx-foundation';`
+} from 'ngx-foundation';
+```
 
 If you are implementing Lazy Loading in your project you will need to remove `import { NgxFoundationModule } from './shared/ngx-foundation.module';` located in `/src/app/app.module.ts` and then import whatever modules you need for each component in your route.
 
@@ -85,12 +87,12 @@ The main stylesheet `/src/styles.scss` contains all of the needed base imports. 
 Add your own unique styling by changing the variables in `/src/assets/scss/_settings.scss`. This overrides the Foundation variables without having to edit the Foundation for Sites settings source file which allows for a near seemless upgrade when updating Foundation.  
 ### Optional What-input
 
-`what-input.js` is imported as a dependency and can be implemented by adding it to the `scripts` array located in the `/angular.json` file.
-`"scripts": [
-    "./node_modules/what-input/dist/what-input.min.js"
-  ]`
-
-Be sure to add it to both "build" and "test".
+`what-input.js` is imported as a dependency and can be implemented by adding it to the `scripts` array located in the `/angular.json` file. Be sure to add to both "build" and "test".
+```
+"scripts": [
+  "./node_modules/what-input/dist/what-input.min.js"
+]
+```
 
 ## Build and Tests
 
