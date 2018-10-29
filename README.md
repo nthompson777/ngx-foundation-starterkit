@@ -41,7 +41,8 @@ If you do not already have Yarn installed, install it globally [here](https://ya
 
 All ngx-foundation components are imported by default and are globally available in your project: `/src/app/shared/ngx-foundation.module.ts`. Remove or comment out the modules that you do not need.  
 
-`import {
+```
+import {
   AccordionModule,
   AlertModule,
   ButtonsModule,
@@ -60,7 +61,8 @@ All ngx-foundation components are imported by default and are globally available
   TimepickerModule,
   TooltipModule,
   TypeaheadModule,
-} from 'ngx-foundation';`
+} from 'ngx-foundation';
+```
 
 If you are implementing Lazy Loading in your project you will need to remove `import { NgxFoundationModule } from './shared/ngx-foundation.module';` located in `/src/app/app.module.ts` and then import whatever modules you need for each component in your route.
 
