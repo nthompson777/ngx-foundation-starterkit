@@ -1,8 +1,12 @@
 // Global Overrides and Added Styles
 
+// Check the _settings.scss variables file first to see if you're covered there before creating a global override!
+
+// Feel free to edit or remove most/all of these styles to make it your own. Add one-off styles to the component's own SCSS file.
+
+
 // Base Styles
 // -------------------------------
-
 footer {
 	background-color: $light-gray;
 	text-align: center;
@@ -11,7 +15,7 @@ footer {
 
 // Sticky Footer for Static Footer Content Only! (stuck to bottom of viewport no matter the height of body content)
 .off-canvas-wrapper {
-	min-height: calc(100vh - 159px);  // 100vh minus the height of the footer (only for static footer height)
+	min-height: calc(100vh - 159px);  // 100vh minus the actual height of the footer (only for static footer height)
 }
 
 main {
@@ -24,7 +28,7 @@ main {
 	color: $primary-color;
 
 	.appTitle {
-		padding-left: 20px;
+		margin-left: 20px;
 		color: $body-font-color;
 	}
 }
