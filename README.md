@@ -55,7 +55,6 @@ import {
   ModalModule,
   OffcanvasModule,
   PaginationModule,
-  PopoverModule,
   ProgressbarModule,
   RatingModule,
   SortableModule,
