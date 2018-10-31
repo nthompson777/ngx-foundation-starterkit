@@ -4727,10 +4727,10 @@ neo-async@^2.5.0:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
   integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
 
-ngx-foundation@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/ngx-foundation/-/ngx-foundation-1.0.4.tgz#b90e1fe31188b8d56921e5aa3f1f7ccaceec53e6"
-  integrity sha512-3ENJoJ8Oin2OjszjC7pwGtS7KjQHdVI8rm3gkbB84jmSbdJQgBA5TPhY34EMgrSOa2ppyexce6YoEzeVNzQSVw==
+ngx-foundation@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/ngx-foundation/-/ngx-foundation-1.0.5.tgz#f911c59df46c91990059258cb1cc711e93869cf4"
+  integrity sha512-3LHdhXUJtW8MAkMd2J54SPW8pkwaq256q83vfIxcvjsJoEYx56InUcMptpu1KI0LEE3SXrlQ3cI0UqV/xGqryQ==
 
 nice-try@^1.0.4:
   version "1.0.5"

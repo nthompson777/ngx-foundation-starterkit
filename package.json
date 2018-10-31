@@ -24,7 +24,7 @@
     "core-js": "^2.4.1",
     "foundation-sites": "6.4.3",
     "motion-ui": "2.0.3",
-    "ngx-foundation": "^1.0.4",
+    "ngx-foundation": "^1.0.5",
     "rxjs": "^6.2.2",
     "what-input": "^5.1.1",
     "zone.js": "^0.8.19"
