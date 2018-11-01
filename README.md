@@ -41,7 +41,7 @@ If you do not already have Yarn installed, install it globally [here](https://ya
 
 ### Imported ngx-foundation Modules
 
-All ngx-foundation components are imported by default and are globally available in your project: `/src/app/shared/ngx-foundation.module.ts`. Remove or comment out the modules that you do not need.  
+All ngx-foundation modules are imported by default and are globally available in your project: `/src/app/shared/ngx-foundation.module.ts`. Remove or comment out the modules that you do not need.  
 
 ```
 import {
