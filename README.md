@@ -8,7 +8,7 @@
 
 A Starter Kit for ngx-foundation that uses Angular 7, the latest stable version of Foundation for Sites using the XY Grid and SCSS by default and ngx-foundation. The starter kit contains all of the basic assets to get your SPA up and running quickly.
 
-The Starter Kit/Project is 99.9% style-agnostic and contains the flat/default Foundation for Sites styles, so you will have to add your own styles and change the variables in the `/src/assets/scss/_settings.scss` file yourself to give the project your own unique look. See the [SCSS Variables](#scss-variables) section below for more detailed information.
+The Starter Kit/Project is 99.9% style-agnostic and contains the flat/default Foundation for Sites styles, so you will have to add your own styles and change the variables in the `/src/assets/scss/_settings.scss` file yourself to give the project your own unique look. See the [SCSS Variables section below](#scss-variables) for more detailed information.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.
 
