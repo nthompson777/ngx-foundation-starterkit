@@ -1,7 +1,24 @@
 {
-  "name": "api-ngx-foundation",
+  "name": "ngx-foundation-starterkit",
+  "description": "A Starter Kit for ngx-foundation that contains all of the basic assets to get your Angular SPA up and running quickly.",
   "version": "1.0.6",
+  "author": "Nate Thompson",
+  "homepage": "https://ngxfoundation.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nthompson777/ngx-foundation-starterkit"
+  },
   "license": "MIT",
+  "keywords": [
+    "foundation-angular-starterkit",
+    "foundation-angular-starter-project",
+    "foundation-angular-skeleton",
+    "angular-foundation",
+    "angular-foundation-for-sites",
+    "ngx-bootstrap-alternative",
+    "zurb-foundation-angular",
+    "foundation-for-sites-angular-framework"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -52,6 +69,6 @@
     "ts-node": "~7.0.1",
     "tslint": "~5.11.0",
     "typescript": "^3.1.6",
-    "webpack": "^4.16.5"
+    "webpack": "^4.24.0"
   }
 }
