@@ -3,18 +3,14 @@
 
 [![dependencies Status](https://david-dm.org/nthompson777/ngx-foundation-starterkit/status.svg)](https://david-dm.org/nthompson777/ngx-foundation-starterkit) [![npm version](https://img.shields.io/npm/v/ngx-foundation.svg)](https://npmjs.org/package/ngx-foundation) 
 [![GitHub license](https://img.shields.io/github/license/nthompson777/ngx-foundation-starterkit.svg)](https://github.com/nthompson777/ngx-foundation-starterkit/blob/master/LICENSE) 
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/nthompson777/ngx-foundation-starterkit.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fnthompson777%2Fngx-foundation-starterkit)
-
-
-
-
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/nthompson777/ngx-foundation.svg?style=social)](https://twitter.com/intent/tweet?text=The+best+way+to+quickly+integrate+Zurb+Foundation+for+Sites+components+with+Angular+6+or+7:&url=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fngx-foundation)
 
 
 A Starter Kit for ngx-foundation that uses Angular 7, the latest stable version of Foundation for Sites using the XY Grid and SCSS by default and ngx-foundation. The starter kit contains all of the basic assets to get your SPA up and running quickly.
 
 The Starter Kit/Project is 99.9% style-agnostic and contains the flat/default Foundation for Sites styles, so you will have to add your own styles and change the variables in the `/src/assets/scss/_settings.scss` file yourself to give the project your own unique look. See the [SCSS Variables](#scss-variables) section below for more detailed information.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.X.X.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.
 
 
 ## Table of contents
