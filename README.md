@@ -52,13 +52,13 @@ All ngx-foundation modules are imported by default and are globally available in
 ```
 import {
   AccordionModule,
-  AlertModule,
+  AlertModule,        // Foundation Callouts
   ButtonsModule,
-  CarouselModule,
+  CarouselModule,     // Foundation Orbit
   CollapseModule,
   BsDatepickerModule,
-  BsDropdownModule,
-  ModalModule,
+  BsDropdownModule,   // Foundation Dropdown Menus and Dropdown Panes
+  ModalModule,        // Foundation Reveal
   OffcanvasModule,
   PaginationModule,
   ProgressbarModule,
