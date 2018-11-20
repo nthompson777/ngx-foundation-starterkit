@@ -71,7 +71,7 @@ import {
 } from 'ngx-foundation';
 ```
 
-If you are implementing Lazy Loading in your project you will need to remove `import { NgxFoundationModule } from './shared/ngx-foundation.module';` located in `/src/app/app.module.ts` and then import whatever modules you need for each component in your route.
+If you are implementing Lazy Loading or don't want to have all modules globally available in your project you will need to remove `import { NgxFoundationModule } from './shared/ngx-foundation.module';` located in `/src/app/app.module.ts` and then import whatever modules you need for each component in your route.
 
 ## Development Server
 
