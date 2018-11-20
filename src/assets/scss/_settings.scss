@@ -62,6 +62,8 @@
 
 @import '~foundation-sites/scss/util/util';
 
+// Set to 'true' when checking for Section 508 Compliance
+$contrast-warnings: false;
 
 // 1. Global
 // ---------
